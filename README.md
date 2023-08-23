@@ -11,10 +11,13 @@
 <br>
 <h1>como fazer uma tabela?</h1>
 <h2> usamos </h2>
-<h4>create table modeçp
+<h3>create table "nome da tabela"
 (
 	idmodelo int not null primary key identity,
 	nome varchar(200)not null,
 	descricao varchar(500)
 )
-</h4>
+</h3>
+<h4> no caso fizemos uma tabela de modelo, descriçao e nome</h4>
+
+
