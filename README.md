@@ -12,8 +12,6 @@
 
 <h1>como fazer uma tabela?</h1>
 
-<h2> usamos </h2>
-
 <p>create table "nome da tabela"
 (
 	idmodelo int not null primary key identity,
