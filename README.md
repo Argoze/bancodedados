@@ -1,7 +1,5 @@
-# bancodedados
-minhas aulas de banco de dados 
-Estamos utlizando o "microsift SQL sever"
-
+<h1>aula de banco de dados </h1>
+<h2>Estamos utlizando o "microsift SQL sever"</h2>
 <h1>Como criar um arquivo?<h1>
 <h2>canto superior esquerdo <strog>Nova consulta</strog> </h2>
 <h2>para criar o banco de dados é preciso colocar no arquivo <strog>CREATE DATABASE "NOME DO BD"</strog></h2>
