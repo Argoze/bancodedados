@@ -31,11 +31,11 @@ ALTER TABLE Modelo ADD NumeroLugares int
 ALTER TABLE Modelo ADD Tipo varchar(100)
 go
 
---Adicionar Consistência
+--Adicionar ConsistÃªncia
 ALTER TABLE Modelo ADD CHECK (Tipo in ('Sedan', 'SUV', 'Hatch', 'Outros'))
 go
 
---Valor Padrão
+--Valor PadrÃ£o
 ALTER TABLE Modelo ADD CONSTRAINT defLugares DEFAULT 5 FOR NumeroLugares
 go
 
@@ -45,7 +45,7 @@ ALTER TABLE Veiculo ADD AnoFabricacao int
 ALTER TABLE Veiculo ADD Cores varchar(10)
 go
 
---Adicionar Consistência
+--Adicionar ConsistÃªncia
 ALTER TABLE Veiculo ALTER COLUMN AnoFabricacao int not null
 go
 
@@ -79,10 +79,10 @@ DBCC	CHECKIDENT (Modelo, RESEED, 0) /*reset nos id da tabela*/
 
 SET DATEFORMAT DMY
 
-INSERT INTO Veiculo (Proprietario, Placa, DataCompra, IDModelo, Valor, AnoFabricacao) VALUES --inserindo iformaçao no veiculo
+INSERT INTO Veiculo (Proprietario, Placa, DataCompra, IDModelo, Valor, AnoFabricacao) VALUES --inserindo iformaÃ§ao no veiculo
 ('Gustvo Argoze', 'nsei', '29-03-2004', 1, 50000, 2004)
 
-INSERT INTO Veiculo  VALUES --inserindo iformaçao no veiculo
+INSERT INTO Veiculo  VALUES --inserindo iformaÃ§ao no veiculo
 ('Victoria Mariucha', 'nsei', '29-03-2004 13:59:12', 2, 123000, 2004, 'rosa')
 
 select *from Veiculo --vendo a tabela
@@ -92,7 +92,7 @@ select *from Modelo
 update Modelo set Descricao = 'VAI DAR MERDA' -- nao coloquei em qual linha vai aplicar logo afetou todas as linhas
 
 update Modelo set Descricao = 'Carro forte' where IDModelo = 3 -- agora disse em qual linha ele deve mudar
-update Modelo set Descricao ='Nova', NumeroLugares = 7 where Tipo = 'SUV' -- mudei todas as descriçoes e numero de lugares em todos que estao com o tpo SUV
+update Modelo set Descricao ='Nova', NumeroLugares = 7 where Tipo = 'SUV' -- mudei todas as descriÃ§oes e numero de lugares em todos que estao com o tpo SUV
 
 update Veiculo set Cor = 'branco' where Cor is null --atualiza todos as cores que estiverem NULL
 
