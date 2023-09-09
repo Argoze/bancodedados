@@ -2,7 +2,7 @@
 Grupo 5 - 06/09/23
 Gustavo Argoze - 212070
 Felipe Marins Sanchez - 235272
-Tales Augusto Satório Furlan - 212170 
+Tales Augusto Satï¿½rio Furlan - 212170 
 */
 
 create database AC1060923
@@ -62,22 +62,35 @@ go
 -- 5 - DML
 
 INSERT INTO Raca (Nome, Descricao, Origem) VALUES
-('Humanos', 'Seres bípedes com polegar opositor', 'Macacos'),
-('Vampiros', 'Seres bípedes com polegar opositor e presas', 'Bruxaria'),
-('Murloc', 'Seres bípedes com polegar opositor e gelras', 'Peixes')
+('Humanos', 'Seres BÃ­pedes com polegar opositor', 'Macacos'),
+('Vampiros', 'Seres BÃ­pedes com polegar opositor e presas', 'Bruxaria'),
+('Murloc', 'Seres BÃ­pedes com polegar opositor e gelras', 'Peixes')
 
 INSERT INTO Habilidade(Nome) VALUES
 ('Pedrada'),
 ('Chupada'),
-('Lançada')
+('LanÃ§ada')
 
 INSERT INTO Classe(Nome, Caracteristicas, IDHabilidade) VALUES
 ('Guerreiro', 'Robusto', 1),
-('Assassino', 'Sanguinário', 2),
-('Caçador', 'Estrategista', 3)
+('Assassino', 'SanguinÃ¡rio', 2),
+('CaÃ§ador', 'Estrategista', 3)
 
--- 6 
+-- 6
 
+UPDATE Classe SET Caracteristicas = 'CaracterÃ­sticas Gerais' WHERE Caracteristicas IS NULL;
 
+-- 7
 
-select *from Raca
+DELETE FROM Personagem WHERE YEAR(DataNascimento) BETWEEN 1970 AND 1990;
+
+-- 8 - DQL
+SELECT * FROM Classe;
+
+-- 9
+
+SELECT Nome, DataNascimento, Poder FROM Personagem WHERE Poder BETWEEN 0 AND 75;
+
+-- 10
+
+SELECT Nome, Descricao, Origem FROM Raca WHERE Nome LIKE '%Orc%';
