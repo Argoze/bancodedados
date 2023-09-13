@@ -1,4 +1,4 @@
-use BD2023S2_Turma
+use dia13_09_23
 
 select *from Modelo
 select *from Veiculo
